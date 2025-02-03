@@ -1,0 +1,258 @@
+#html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+}
+
+body {
+  background-image: url("images/background.jpeg");
+  text-align: center;
+  min-width: 750px;
+  font-family: Gill Sans, Arial;
+  font-size: 46px;
+  background-attachment: fixed;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+
+p {
+ font-size: 20px ; 
+}
+
+h2 {
+  font-size: 40px ;
+}
+
+div {
+  transition: all 2s linear;
+}
+
+h1 {
+  grid-area: heading ;
+  padding-bottom: 30px;
+}
+
+#main-container {
+  background-color: white;
+  border-radius: 20px;
+  text-align: left;
+  overflow: hidden;
+  color: black;
+  opacity: 0.75;
+  padding: 2%;
+  margin: 20px 70px;
+  height: 90vh;
+  display: grid;
+  place-items: center;
+  grid-template:
+
+   
+    ".                  heading               ." 30vh
+    ".          carousel                 .   " 40vh
+    ".              .                   ." 10vh
+    ".               .                 ." 1vh
+    /1fr 1fr 1fr;
+}
+
+/* ________ PROJECTS ________ */
+
+#projects {
+  margin: 20px 70px ;
+  background-color: white ;
+  opacity: 0.75 ;
+  width: 100 vw ;
+  height: 700px ;
+  border-radius: 20px ;
+  display: grid;
+  grid-template:
+    "text       photo    " 20vh
+    /1fr 1fr ;
+}
+
+#projecttext {
+  grid-area: text ;
+  padding-top: 220px ;
+  margin-left: 60px ;
+  max-width: 600px;
+  text-align: left ;
+}
+
+#projecttext.awake{
+  transform: translateX(15vw);
+}
+
+#projectphoto {
+  grid-area: photo ;
+  padding-top: 70px ;
+}
+
+#projectphoto.awake {
+  transform: translateX(-15vw);
+}
+
+/* ________ ABOUT ________ */
+
+#about {
+  margin: 20px 70px ;
+  background-color: white ;
+  opacity: 0.75 ;
+  width: 100 vw ;
+  height: 700px ;
+  border-radius: 20px ;
+  display: grid;
+  grid-template:
+    "photo       text    " 20vh
+    /1fr 1fr ;
+}
+
+#aboutphoto {
+  grid-area: photo ;
+  padding-top: 100px ;
+}
+
+#aboutphoto.awake {
+  transform: translateX(25vw);
+}
+
+#abouttext.awake {
+  transform: translateX(-25vw);
+}
+
+#abouttext {
+  background-color: white;
+  grid-area: text ;
+  padding: 10px;
+  margin-top: 180px ;
+  text-align: left ;
+  max-width: 500px;
+}
+
+/* ________ CONTACT ________ */
+
+#contact {
+  margin: 20px 70px ;
+  background-color: white ;
+  opacity: 0.75 ;
+  width: 100 vw ;
+  height: 800px ;
+  border-radius: 20px ;
+}
+
+#contacttext {
+  padding-top: 80px ;
+}
+
+.contactform {
+  padding: 5% 10% ;
+  border: solid 1px black ;
+  border-radius: 20px ;
+  margin: 10% ;
+  font-size: 20px ;
+  max-height: 500px;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+/* ________ IMG CAROUSEL ________ */
+
+.carousel-image {
+  width: 900px;
+  height:500px;
+  object-fit: cover;
+}
+
+#carousel {
+  grid-area: carousel;
+  width: 900 px;
+  display: flex;
+}
+
+#frame {
+  width: 900px ;
+  height: 500px ;
+  overflow: hidden;
+}
+
+#frieze {
+  display: flex ;
+  height: 500px ;
+	width: 500% ;
+   transition: transform .5s ease-in ;
+}
+
+/* ________ NAVIGATION ________ */
+
+ .global-navigation {
+  background-color: black;
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  height: 50px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  gap: 2em;
+  transition: 0s;
+   
+}
+.navigation-link,
+.navigation-link-over {
+  text-align: center;
+  font-size: 14px;
+  background-color: white;
+  border-radius: 20px;
+  color: black;
+  height: 60%;
+  width: 200px ;
+  border: solid black 1px;
+}
+.navigation-link-over {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: solid black 1px;
+  box-shadow: 5px 3px white;
+  transition: 0s;
+}
+
+
+/* ________ BUTTON________ */
+
+button {
+  font-size: 15px;
+  font-weight: bold;
+  background-color: white;
+}
+
+#button {
+  background-color: darkgray;
+  font-family: Gill Sans, Verdana;
+  color: black;
+  grid-area: button;
+  font-size: 20px;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.awake {
+	
+	transform: translateX( 0 ) ;
+}
+.asleep {
+	
+	transform: translateX( 20vw ) ;
+}
